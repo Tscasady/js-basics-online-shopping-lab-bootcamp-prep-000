@@ -25,7 +25,7 @@ function viewCart() {
     var cartStatement = 'In your cart, you have ' 
     var cartArray
     for (var i=0; i < cart.length; i++){
-      if (cart.length-1 === 0){
+      if (cart.length === 1){
       cartArray = Object.keys(cart[i])
       cartStatement = cartStatement + `${cartArray[0]} at $${cart[i][cartArray[0]]}.` 
       console.log(cartStatement)
