@@ -35,7 +35,8 @@ function viewCart() {
       cartStatement = cartStatement.slice(0,-2) + ` and ${cartArray[0]} at $${cart[i][cartArray[0]]}.`
       console.log(cartStatement)
      }else if (i === cart.length - 2){
-       
+       cartArray = Object.keys(cart[i])
+       cartStatement = cartStatement +`${cartArray[0]} at $${cart[i][cartArray[0]]} ` 
      }    
      else{
        cartArray = Object.keys(cart[i])
