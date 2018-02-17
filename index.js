@@ -37,7 +37,7 @@ function viewCart() {
       for (var i=0; i < cart.length; i++){   
        if (i === cart.length - 1 && i > 1){
       cartArray = Object.keys(cart[i])
-      cartStatement = cartStatement + ` and ${cartArray[0]} at $${cart[i][cartArray[0]]}.`
+      cartStatement = cartStatement + `and ${cartArray[0]} at $${cart[i][cartArray[0]]}.`
      }    
      else{
        cartArray = Object.keys(cart[i])
