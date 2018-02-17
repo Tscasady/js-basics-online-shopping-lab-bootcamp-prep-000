@@ -56,8 +56,7 @@ function removeFromCart(item) {
   var tempCartLength = cart.length
   for (var i = 0; i < cart.length; i++){
     if (cart[i].hasOwnProperty(item) === true){
-      var index = cart.indexOf(cart[i])
-      cart = cart.slice(index, 1)
+      cart = [...cart.slice(0, i), ...cart.slice(i+1)]
       return cart
     }
   }
