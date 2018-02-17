@@ -18,27 +18,27 @@ function addToCart(item) {
 }
 
 function viewCart() {
+      var cartStatement = 'In your cart, you have ' 
+      var cartArray
   if (cart.length === 0){
     console.log('Your shopping cart is empty.')
   }
-    else{
-    var cartStatement = 'In your cart, you have ' 
-    var cartArray
-    for (var i=0; i < cart.length; i++){
-      if (cart.length === 1){
+    else if (cart.length === 1){
       cartArray = Object.keys(cart[i])
       cartStatement = cartStatement + `${cartArray[0]} at $${cart[i][cartArray[0]]}.` 
-      console.log(cartStatement)
+      console.log('1 ran')
     }
-    else if (cart.length === 2 && i < 1){
+    else if (cart.length === 2){
       var cartArray1 = Object.keys(cart[0])
       var cartArray2 = Object.keys(cart[1])
        cartStatement = cartStatement +`${cartArray1[0]} at $${cart[0][cartArray1[0]]} and ${cartArray2[0]} at $${cart[1][cartArray2[0]]}.` 
+    console.log('2 ran')
     }
-      else if (i === cart.length - 1){
+    else if (cart.length >= 3){
+      for (var i=0; i < cart.length; i++){   
+       if (i === cart.length - 1 && i > 1){
       cartArray = Object.keys(cart[i])
       cartStatement = cartStatement + ` and ${cartArray[0]} at $${cart[i][cartArray[0]]}.`
-      console.log(cartStatement)
      }    
      else{
        cartArray = Object.keys(cart[i])
