@@ -34,7 +34,10 @@ function viewCart() {
       cartArray = Object.keys(cart[i])
       cartStatement = cartStatement.slice(0,-2) + ` and ${cartArray[0]} at $${cart[i][cartArray[0]]}.`
       console.log(cartStatement)
-     }    else{
+     }else if (i === cart.length - 2){
+       
+     }    
+     else{
        cartArray = Object.keys(cart[i])
        cartStatement = cartStatement +`${cartArray[0]} at $${cart[i][cartArray[0]]}, ` 
     }
@@ -68,7 +71,7 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   if (cardNumber === undefined){
     console.log("Sorry, we don't have a credit card on file for you.")
-  }else{
-  console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}`)}
+  }
+  console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}`)
   cart = [];
 }
