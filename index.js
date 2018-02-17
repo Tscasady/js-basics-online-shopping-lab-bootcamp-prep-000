@@ -25,8 +25,7 @@ function viewCart() {
   }
   else if (cart.length === 1){
       cartArray = Object.keys(cart[0])
-      cartStatement = cartStatement + `${cartArray[0]} at $${cart[i][cartArray[0]]}.` 
-      console.log('1 ran')
+      cartStatement = cartStatement + `${cartArray[0]} at $${cart[0][cartArray[0]]}.` 
     }
     else if (cart.length === 2){
       var cartArray1 = Object.keys(cart[0])
