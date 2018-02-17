@@ -33,11 +33,11 @@ function viewCart() {
     else if (cart.length === 2){
       var cartArray1 = Object.keys(cart[0])
       var cartArray2 = Object.keys(cart[1])
-       cartStatement = cartStatement +`${cartArray1[0]} at $${cart[0][cartArray1[0]]} + and ${cartArray2[0]} at $${cart[1][cartArray2[0]]}.` 
+       cartStatement = cartStatement +`${cartArray1[0]} at $${cart[0][cartArray1[0]]} and ${cartArray2[0]} at $${cart[1][cartArray2[0]]}.` 
     }
       else if (i === cart.length - 1){
       cartArray = Object.keys(cart[i])
-      cartStatement = cartStatement.slice(0,-2) + ` and ${cartArray[0]} at $${cart[i][cartArray[0]]}.`
+      cartStatement = cartStatement + ` and ${cartArray[0]} at $${cart[i][cartArray[0]]}.`
       console.log(cartStatement)
      }    
      else{
