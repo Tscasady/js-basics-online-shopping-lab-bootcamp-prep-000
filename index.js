@@ -24,7 +24,7 @@ function viewCart() {
     console.log('Your shopping cart is empty.')
   }
   else if (cart.length === 1){
-      cartArray = Object.keys(cart[i])
+      cartArray = Object.keys(cart[0])
       cartStatement = cartStatement + `${cartArray[0]} at $${cart[i][cartArray[0]]}.` 
       console.log('1 ran')
     }
